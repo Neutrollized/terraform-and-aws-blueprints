@@ -1,7 +1,7 @@
 # README
 What I have in this Terraform example is nothing special; it's spins up a simple VPC with 2 subnets (1 public, 1 private) and then creates an autoscaling group which will spin up an EC2 instance in the private subnet.  What I want to draw your attention to is [this line](https://github.com/Neutrollized/terraform-aws-with-amd/blob/master/main.tf#L160) where I set my [instance_type](https://aws.amazon.com/ec2/instance-types/) and you will notice that it's `t3a.medium` -- so where's the `a` come from and what does it mean?
 
-Given the name of this repo, you can probably surmise that the `a` stands for AMD.  At the time of writing, the AWS EC2 instances that you launch with the 'a' feature [AMD's EPYC processors](https://aws.amazon.com/ec2/amd/).  Why should you care?  Well, this little extra `a` can save you 10% or more on your AWS EC2 instance costs with no drawbacks.
+Given the name of this repo, you can probably surmise that the `a` stands for AMD.  At the time of writing, the AWS EC2 instances that you launch with the `a` feature [AMD's EPYC processors](https://aws.amazon.com/ec2/amd/).  Why should you care?  Well, this little extra `a` can save you 10% or more on your AWS EC2 instance costs with no drawbacks.
 
 ## Migration Barriers
 For the majority of the use cases out there, there shouldn't be any barriers<sup>**</sup>.  Honestly, if you changed the `t3a.medium` to `t3.medium`, you'd be spinning up another Ubuntu server with the same CPU core count and memory sizing.  The only difference is what's powering it.
@@ -11,7 +11,7 @@ I find that a lot of people tend to think that differences between Intel and AMD
 If you pay attention to a of the naming of various Linux packages or OS ISOs, you might notice that `x86_64` and `amd64` are used interchangeably and that's because it was actually AMD that invented the 64-bit processor architecture (hence the name **AMD64**) and it was in fact Intel that adopted AMD's ISA as an extension of their own x86 processor line (hence the name **x86_64**)
 
 
-<sup>**</sup> - There are code/apps/libraries out there that are compiled with flags and will only produce code for a certain kind of CPU.  Yes, I'm referring mainly to Gentoo linux and if you want to read into the details of it, you can do so [here](https://wiki.gentoo.org/wiki/GCC_optimization).
+<sub><sup>**</sup> - There are code/apps/libraries out there that are compiled with flags and will only produce code for a certain kind of CPU.  Yes, I'm referring mainly to Gentoo linux and if you want to read into the details of it, you can do so [here](https://wiki.gentoo.org/wiki/GCC_optimization).</sub>
 
 ## Benefits
 In terms of performance, I have see no differences between equivalent Intel-backed and AMD-backed EC2 instances (i.e. t3.medium vs t3a.medium, or r5.xlarge vs r5a.xlarge).  I draw this observation both from personal use as well as "enterprise" production workloads that we run at work.
