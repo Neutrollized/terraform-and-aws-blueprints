@@ -22,7 +22,7 @@ There are some hidden benefits for moving towards the AMD EPYCs as well.  As the
 
 When there's an arms race between two of largest CPU chip makers in the world, it's the consumers that ultimately win.
 
-### Notes
+## TL;DR
 If you already manage your AWS infrastructure with infrastructure as code -- whether that's [Terraform](https://www.terraform.io/) or AWS' CloudFormation -- you should consider dropping that `a` in your code and give these AMD EPYC-backed EC2 instances a whirl.  You just might be pleasantly surprised.
 
 ### Additional notes 
