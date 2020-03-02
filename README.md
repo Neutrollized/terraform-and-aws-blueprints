@@ -18,7 +18,7 @@ In terms of performance, I have seen no differences between equivalent Intel-bac
 
 From a cost perspective, we see a healthy dose of savings as we run a large number of clusters and EC2 instances, which I can now say are powered by AMD as we've migrated away from Intel.
 
-There are some hidden benefits for moving towards the AMD EPYCs as well.  As their architecture is different, they've been less impacted by the string of CPU vulnerabilities that has popped up recently such as Spectre, Meltdown, ZombieLoad, etc.  Something as simple as being on the right CPU can reduce a lot of potential headaches, so when my directors/VPs what not ask me if we have have anything to mitigate *[insert new CPU vulnerability here]*, my answer lately has just been: "We're safe.  AMD's not impacted."  and what a wonderful feeling that is...
+There are some hidden benefits for moving towards the AMD EPYCs as well.  As their architecture is different, they've been less impacted by the string of CPU vulnerabilities that has popped up recently such as Spectre, Meltdown, ZombieLoad, etc.  Something as simple as being on the right CPU can reduce a lot of potential headaches, so when my directors/VPs ask me if we have have anything to mitigate *[insert new CPU vulnerability here]*, my answer lately has just been: "We're safe.  AMD's not impacted."  and what a wonderful feeling that is...
 
 When there's an arms race between two of largest CPU chip makers in the world, it's the consumers that ultimately win.
 
